@@ -1,9 +1,9 @@
 class Player
   attr_accessor :colour, :name
-  
+
   def initialize(input)
-    @colour = colour.fetch
-    @name = name.fetch
+    @colour = input.fetch(:colour)
+    @name = input.fetch(:name)
   end
 
 end
