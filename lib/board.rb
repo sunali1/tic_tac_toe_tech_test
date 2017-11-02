@@ -12,4 +12,12 @@ attr_reader :grid
     Array.new(3) { Array.new(3){ Cell.new } }
   end
 
+  def get_cell_input(x,y)
+    @grid[x][y]
+  end
+
+  def set_cell_input(x,y, value)
+    @grid[x][y] = "value"
+  end
+
 end

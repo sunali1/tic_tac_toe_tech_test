@@ -6,4 +6,6 @@ class Player
     @name = input.fetch(:name)
   end
 
+
+
 end

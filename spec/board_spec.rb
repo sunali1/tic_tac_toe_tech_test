@@ -10,4 +10,10 @@ describe Board do
     board = Board.new(grid: 'test')
     expect(board.grid).to eq 'test'
   end
+
+  it "gets the Cell input on a given grid" do
+    grid = [['', '', 'test'],['', '', ''],['', '', '']]
+    board = Board.new(grid: grid)
+    expect(board.get_cell_input(0,2)).to eq 'test'
+  end
 end
