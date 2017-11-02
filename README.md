@@ -42,7 +42,7 @@ I want the Board to tell me when I have won, lost or drawn
 
 •••Domain Model
 
-Board: initializes a new game of 3X3 cells, is responsible for
+Board: initializes a new game of 3X3 cells, is responsible for setting and getting of values for the grid and deciding win, lose or draw
 
 Cell: writes O or X  as per player input
 
@@ -52,17 +52,14 @@ Player: has responsibility of the names of 2 players and corresponding inputs of
 
 Winning combinations
 
-The Board is represented as an array of (0 to 8)indices. The WINNING COMBINATIONS are a constant, so as the board knows which combinations are a winner.
+The Board is represented as an array of of 3 nested arrays of (0 to 8)indices. The WINNING COMBINATIONS are a constant, so as the board knows which combinations are a winner.
 
 As player you will be prompted to make a move. The move options are
-top left
-top right
-top middle
-middle left
-middle right
-middle middle
-bottom left
-botton right
-bottom middle
-are given numbers 1 to 9 and mapped to the coordinates (x,y)
-{"1"=>[0, 0], "2"=>[1, 0], "3"=>[2, 0], "4"=>[0, 1], "5"=>[1, 1], "6"=>[2, 1], "7"=>[0, 2], "8"=>[1, 2], "9"=>[2, 2]}
+
+2.4.0 :001 > example_array = [
+2.4.0 :002 >     ['1', '2', '3'],
+2.4.0 :003 >     ['4', '5', '6'],
+2.4.0 :004 >     ['7', '8', '9']
+2.4.0 :005?>   ]
+=> [["1", "2", "3"], ["4", "5", "6"], ["7", "8", "9"]]
+ so example_array[0][1] => '2'
