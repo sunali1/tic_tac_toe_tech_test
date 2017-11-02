@@ -42,11 +42,11 @@ I want the Board to tell me when I have won, lost or drawn
 
 •••Domain Model
 
-Board - initializes a new game of 3X3 cells
+Board: initializes a new game of 3X3 cells
 
-Cell - writes O or X  as per player input
+Cell: writes O or X  as per player input
 
-Players - each make move and counter move
+Game: has responsibility of Board and players - each make move and counter move
 
 Winning combinations
 
@@ -62,3 +62,5 @@ middle middle
 bottom left
 botton right
 bottom middle
+are given numbers 1 to 9 and mapped to the coordinates (x,y)
+{"1"=>[0, 0], "2"=>[1, 0], "3"=>[2, 0], "4"=>[0, 1], "5"=>[1, 1], "6"=>[2, 1], "7"=>[0, 2], "8"=>[1, 2], "9"=>[2, 2]}
