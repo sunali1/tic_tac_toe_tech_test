@@ -6,5 +6,4 @@ describe Cell do
   it "initializes with a default value of '' "do
     expect(cell.value).to eq ""
   end
-
 end

@@ -35,18 +35,20 @@ so that I can make a counter move
 I would like to place a 'X' in an unoccupied cell on the Board
 
 As a player
-so I know whether I have won or lost
+so I know the outcome of the game
 I want the Board to tell me when I have won, lost or drawn
 
 
 
 •••Domain Model
 
-Board: initializes a new game of 3X3 cells
+Board: initializes a new game of 3X3 cells, is responsible for
 
 Cell: writes O or X  as per player input
 
-Game: has responsibility of Board and players - each make move and counter move
+Game: has responsibility of Board and Players - each make move and counter move
+
+Player: has responsibility of the names of 2 players and corresponding inputs of 'X' and 'O'
 
 Winning combinations
 
