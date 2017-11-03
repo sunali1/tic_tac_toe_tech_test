@@ -13,11 +13,19 @@ attr_reader :grid
   end
 
   def get_cell_input(x,y)
-    @grid[x][y]
+    grid[x][y]
   end
 
-  def set_cell_input(x,y, value)
-    @grid[x][y] = "value"
+  def set_cell_input(x, y, value)
+    get_cell_input(x, y).value = value
   end
+
+  def game_over
+    return :winner if winner?
+    return :draw if draw?
+    false
+  end
+
+
 
 end

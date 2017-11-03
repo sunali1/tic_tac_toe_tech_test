@@ -16,4 +16,23 @@ describe Board do
     board = Board.new(grid: grid)
     expect(board.get_cell_input(0,2)).to eq 'test'
   end
+
+  it "sets a value for the Cell at a (x,y) coordinate on a grid" do
+    cell = Cell.new(:value)
+    grid = [['', '', ''],['', Cell.new('X'), ''],['', '', '']]
+    board = Board.new(grid: grid)
+    board.set_cell_input(1,1, 'X')
+    expect(board.get_cell_input(1,1).value).to eq 'X'
+  end
+
+  it "declares game is over and a winner" do
+    board = Board.new
+    allow(board).to receive(:game_over).and_return(:winner)
+    expect(board.game_over).to eq :winner
+  end
+  it "declares game is over and a draw" do
+    board = Board.new
+    allow(board).to receive(:game_over).and_return(:draw)
+    expect(board.game_over).to eq :draw
+  end
 end
