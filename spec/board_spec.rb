@@ -35,4 +35,10 @@ describe Board do
     allow(board).to receive(:game_over).and_return(:draw)
     expect(board.game_over).to eq :draw
   end
+  it "checks if grid is empty and returns true or false" do
+    cell = Cell.new(:value)
+    grid = [['', '', ''],['', Cell.new('X'), ''],['', '', '']]
+    board = Board.new(grid: grid)
+    expect(board.all_empty?).to be false
+  end
 end

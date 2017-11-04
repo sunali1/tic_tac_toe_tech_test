@@ -26,6 +26,9 @@ attr_reader :grid
     false
   end
 
+  def all_empty?
+    grid.join.empty?
+  end
 
 
 end
