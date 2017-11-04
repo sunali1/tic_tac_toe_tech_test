@@ -19,7 +19,7 @@ describe Board do
 
   it "sets a value for the Cell at a (x,y) coordinate on a grid" do
     cell = Cell.new(:value)
-    grid = [['', '', ''],['', Cell.new('X'), ''],['', '', '']]
+    grid = [['', '', ''],['', Cell.new('test'), ''],['', '', '']]
     board = Board.new(grid: grid)
     board.set_cell_input(1,1, 'X')
     expect(board.get_cell_input(1,1).value).to eq 'X'

@@ -30,5 +30,4 @@ attr_reader :grid
     grid.join.empty?
   end
 
-
 end
